@@ -32,7 +32,8 @@ namespace ipdb
             var metaBytes = new byte[metaLength];
             Array.Copy(data, 4, metaBytes, 0, metaLength);
 
-            var meta = JsonSerializer.Deserialize<MetaData>(Encoding.UTF8.GetString(metaBytes));
+            var json = Encoding.UTF8.GetString(metaBytes);
+            var meta = JsonSerializer.Deserialize<MetaData>(json);
 
             nodeCount = meta.nodeCount;
             this.meta = meta;

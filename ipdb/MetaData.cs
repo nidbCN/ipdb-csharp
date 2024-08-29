@@ -8,21 +8,21 @@ namespace ipdb
     public class MetaData
     {
         [JsonPropertyName("build")]
-        public int Build;
+        public int Build { get; set; }
 
         [JsonPropertyName("ip_version")]
-        public int IPVersion;
+        public int IPVersion { get; set; }
 
         [JsonPropertyName("node_count")]
-        public int nodeCount;
+        public int nodeCount { get; set; }
 
         [JsonPropertyName("languages")]
-        public Dictionary<string, int> Languages;
+        public Dictionary<string, int> Languages { get; set; }
 
         [JsonPropertyName("fields")]
-        public string[] Fields;
+        public string[] Fields { get; set; }
 
         [JsonPropertyName("total_size")]
-        public int totalSize;
+        public int totalSize { get; set; }
     }
 }

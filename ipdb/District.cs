@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ipdb
+﻿namespace ipdb
 {
 
     public class District

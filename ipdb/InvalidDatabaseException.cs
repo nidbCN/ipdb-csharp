@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace ipdb
+﻿namespace ipdb
 {
     public class InvalidDatabaseException : IOException
     {
