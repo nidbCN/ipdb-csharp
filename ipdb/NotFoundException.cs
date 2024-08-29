@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ipdb
+﻿namespace ipdb
 {
     public class NotFoundException : Exception
     {

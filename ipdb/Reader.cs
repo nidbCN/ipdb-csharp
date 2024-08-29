@@ -1,9 +1,6 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Text;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace ipdb
 {
@@ -35,7 +32,7 @@ namespace ipdb
             var metaBytes = new byte[metaLength];
             Array.Copy(data, 4, metaBytes, 0, metaLength);
 
-            var meta = JsonConvert.DeserializeObject<MetaData>(Encoding.UTF8.GetString(metaBytes));
+            var meta = JsonSerializer.Deserialize<MetaData>(Encoding.UTF8.GetString(metaBytes));
 
             nodeCount = meta.nodeCount;
             this.meta = meta;

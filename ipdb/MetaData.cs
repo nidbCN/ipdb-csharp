@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using J = Newtonsoft.Json.JsonPropertyAttribute;
+﻿using System.Text.Json.Serialization;
 
 namespace ipdb
 {
@@ -8,11 +7,22 @@ namespace ipdb
      */
     public class MetaData
     {
-        [J("build")]public int Build;
-        [J("ip_version")] public int IPVersion;
-        [J("node_count")] public int nodeCount;
-        [J("languages")] public Dictionary<string, int> Languages;
-        [J("fields")] public string[] Fields;
-        [J("total_size")] public int totalSize;
+        [JsonPropertyName("build")]
+        public int Build;
+
+        [JsonPropertyName("ip_version")]
+        public int IPVersion;
+
+        [JsonPropertyName("node_count")]
+        public int nodeCount;
+
+        [JsonPropertyName("languages")]
+        public Dictionary<string, int> Languages;
+
+        [JsonPropertyName("fields")]
+        public string[] Fields;
+
+        [JsonPropertyName("total_size")]
+        public int totalSize;
     }
 }
